@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form method="POST" action="/new">
+        <a href="http://localhost:3000">Home</a>
+        <p>
+            <label for="user">Nome do usuário: </label>
+            <input type="text" id="user" name="user">
+        </p>
+        <p>
+            <label for="message">Insira a mensagem: </label>
+            <textarea cols="30" rows="10" id="message" name="newMessage"></textarea>
+        </p>
+        <p>
+            <button type="submit">Enviar!</button>
+        </p>
+    </form>

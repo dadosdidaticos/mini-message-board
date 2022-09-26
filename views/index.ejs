@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Bem vindo ao <%= title %></p>
+    <a href="http://localhost:3000/new">Enviar Mensagem!<br></a>
+    <h2>Quadro</h2>
+    <table>
+      <% messages.forEach( function (message,index){%>
+        <tr>
+          <td style="border: black;">
+            <ul>
+              <li>Usuário: <%= message.user %></li>
+              <li>Texto: <%= message.text %></li>
+              <li>Adicionada em: <%= message.added %></li>
+            </ul>
+          </td>
+        </tr>
+      <%}); %>
+    </table>
+  </body>
+</html>
