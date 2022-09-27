@@ -15,10 +15,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Quadro de Mensagens',messages:messages });
+  res.render('index', { title: 'Quadro de Mensagens',messages:messages,newPath: `${req.protocol}://${req.headers.host}/new`});
 });
 router.get('/new', function(req, res, next) {
-  res.render('form', {title:"Adicionar nova mensagem"});
+  res.render('form', {title:"Adicionar nova mensagem",newPath: `${req.protocol+"://"+req.headers.host}/new`});
 });
 router.post('/new', function(req, res, next) {
   messages.push({text:req.body.newMessage, user:req.body.user, added: new Date()})
