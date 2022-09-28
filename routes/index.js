@@ -15,7 +15,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Quadro de Mensagens',messages:messages,newPath: `${req.protocol}://${req.headers.host}/new`});
+  res.render('index', { title: 'Quadro de Mensagens',messages:messages,newPath: `${req.protocol}://${req.headers.host}`});
 });
 router.get('/new', function(req, res, next) {
   res.render('form', {title:"Adicionar nova mensagem",newPath: `${req.protocol+"://"+req.headers.host}/new`});
